@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  outline-color: rgb(140, 180, 235);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(37, 32, 44);
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
