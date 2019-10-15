@@ -1,1 +1,14 @@
-Aqui vão os filmes
+<app-wrap-content>
+  <app-header-section text="Start Wars Filmes"></app-header-section>
+  <ng-template [ngIf]="films" [ngIfElse]="noResults">
+    <div class="films-div">
+      <app-film-item
+        *ngFor="let film of films.results"
+        [film]="film"
+      ></app-film-item>
+    </div>
+  </ng-template>
+  <ng-template #noResults>
+    <app-no-results></app-no-results>
+  </ng-template>
+</app-wrap-content>

@@ -1,0 +1,9 @@
+<div class="film">
+  <div>
+    <img src="/assets/pop-corn.svg" [alt]="film.title" />
+    <p>
+      <strong>{{ film.title }} - {{ film.release_date | date: "yyyy" }}</strong>
+    </p>
+    <p>Diretor: {{ film.director }}</p>
+  </div>
+</div>
