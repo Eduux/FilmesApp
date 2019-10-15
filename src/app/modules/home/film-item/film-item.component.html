@@ -1,9 +1,9 @@
-<div class="film">
+<div class="film" (click)="openDetails(film?.url)">
   <div>
-    <img src="/assets/pop-corn.svg" [alt]="film.title" />
-    <p>
+    <img *ngIf="film?.title" src="/assets/pop-corn.svg" [alt]="film.title" />
+    <p *ngIf="film?.title">
       <strong>{{ film.title }} - {{ film.release_date | date: "yyyy" }}</strong>
     </p>
-    <p>Diretor: {{ film.director }}</p>
+    <p *ngIf="film?.director"><strong>Diretor:</strong> {{ film.director }}</p>
   </div>
 </div>

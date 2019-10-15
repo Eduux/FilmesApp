@@ -1,17 +1,19 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Film } from "src/app/interfaces/film";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-film-item",
   templateUrl: "./film-item.component.html",
   styleUrls: ["./film-item.component.scss"]
 })
-export class FilmItemComponent implements OnInit {
+export class FilmItemComponent {
   @Input() public film: Film;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-    console.log(this.film);
+  openDetails(url) {
+    const id = parseInt(url.match(/\d+/g).map(Number));
+    this.router.navigate(["/detail", id]);
   }
 }
