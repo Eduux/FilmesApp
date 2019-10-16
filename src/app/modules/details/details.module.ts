@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DetailsRoutingModule } from "./datils.routing.module";
+
 import { DetailsComponent } from "./details.component";
 
 @NgModule({
