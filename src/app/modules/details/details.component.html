@@ -1,1 +1,6 @@
-<p>oi</p>
+<ng-template [ngIf]="film" [ngIfElse]="noResults">
+  <app-header-section [text]="film.title" [btnback]="true"></app-header-section>
+</ng-template>
+<ng-template #noResults>
+  <app-no-results></app-no-results>
+</ng-template>

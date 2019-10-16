@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Film } from "src/app/interfaces/film";
 import { Router } from "@angular/router";
 

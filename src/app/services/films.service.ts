@@ -16,7 +16,7 @@ export class FilmsService {
     return this.http.get<Array<Film>>(`${api.baseUrl}/${this.urlService}/`);
   }
 
-  getById(id: string) {
+  getById(id: number) {
     return this.http.get<Film>(`${api.baseUrl}/${this.urlService}/${id}`);
   }
 }

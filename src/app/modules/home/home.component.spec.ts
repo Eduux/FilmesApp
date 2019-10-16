@@ -18,7 +18,6 @@ describe("HomeComponent", () => {
       declarations: [
         HomeComponent,
         HeaderSectionComponent,
-        WrapContentComponent,
         NoResultsComponent,
         FilmItemComponent
       ]
@@ -37,12 +36,6 @@ describe("HomeComponent", () => {
 
   it("should load header section", () => {
     const fixture = TestBed.createComponent(HeaderSectionComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it("should load wrap content", () => {
-    const fixture = TestBed.createComponent(WrapContentComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });

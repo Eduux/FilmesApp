@@ -3,12 +3,13 @@ import { RouterTestingModule } from "@angular/router/testing";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { HeaderComponent } from "./core/header/header.component";
+import { WrapContentComponent } from "./core/wrap-content/wrap-content.component";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, HttpClientModule],
-      declarations: [AppComponent, HeaderComponent]
+      declarations: [AppComponent, HeaderComponent, WrapContentComponent]
     }).compileComponents();
   }));
 
@@ -20,6 +21,12 @@ describe("AppComponent", () => {
 
   it("should load header", () => {
     const fixture = TestBed.createComponent(HeaderComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it("should load Wrap Content", () => {
+    const fixture = TestBed.createComponent(WrapContentComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });

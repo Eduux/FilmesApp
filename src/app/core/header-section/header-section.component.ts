@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Location } from "@angular/common";
 
 @Component({
   selector: "app-header-section",
@@ -7,4 +8,11 @@ import { Component, Input } from "@angular/core";
 })
 export class HeaderSectionComponent {
   @Input() public text;
+  @Input() public btnback: Boolean = false;
+
+  constructor(private location: Location) {}
+
+  back() {
+    this.location.back();
+  }
 }

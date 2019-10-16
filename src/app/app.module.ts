@@ -5,12 +5,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
-import { HeaderComponent } from "src/app/core/header/header.component";
-import { WrapContentComponent } from "src/app/core/wrap-content/wrap-content.component";
+import { CoreModule } from "src/app/core/core.module";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, WrapContentComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CoreModule],
   providers: [],
   bootstrap: [AppComponent]
 })
