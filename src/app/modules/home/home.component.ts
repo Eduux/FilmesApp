@@ -17,13 +17,8 @@ export class HomeComponent implements OnInit {
   }
 
   getFilms() {
-    this.filmService.getAll().subscribe(
-      films => {
-        this.films = films;
-      },
-      err => {
-        alert("Api offline!");
-      }
-    );
+    this.filmService.getAll().subscribe(films => {
+      this.films = films;
+    });
   }
 }
