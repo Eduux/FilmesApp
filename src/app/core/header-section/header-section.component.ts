@@ -14,5 +14,6 @@ export class HeaderSectionComponent {
 
   back() {
     this.location.back();
+    return true;
   }
 }

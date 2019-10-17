@@ -1,6 +1,7 @@
 <ng-template [ngIf]="film" [ngIfElse]="noResults">
   <app-header-section [text]="film.title" [btnback]="true"></app-header-section>
+  <app-film-details [film]="film"></app-film-details>
 </ng-template>
 <ng-template #noResults>
-  <app-no-results></app-no-results>
+  <app-loading></app-loading>
 </ng-template>

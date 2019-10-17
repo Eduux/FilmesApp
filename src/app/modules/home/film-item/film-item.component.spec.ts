@@ -1,9 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-
-import { FilmItemComponent } from "./film-item.component";
-
 import { RouterTestingModule } from "@angular/router/testing";
+
 import { Router } from "@angular/router";
+import { FilmItemComponent } from "./film-item.component";
 
 describe("FilmItemComponent", () => {
   let component: FilmItemComponent;

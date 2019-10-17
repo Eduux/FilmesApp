@@ -1,4 +1,4 @@
-<app-header-section text="Start Wars Filmes"></app-header-section>
+<app-header-section text="Start Wars Movies"></app-header-section>
 <ng-template [ngIf]="films" [ngIfElse]="noResults">
   <div class="films-div">
     <app-film-item
@@ -8,5 +8,5 @@
   </div>
 </ng-template>
 <ng-template #noResults>
-  <app-no-results></app-no-results>
+  <app-loading></app-loading>
 </ng-template>

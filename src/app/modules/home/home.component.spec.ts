@@ -1,12 +1,11 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { HttpClientModule } from "@angular/common/http";
+import { RouterTestingModule } from "@angular/router/testing";
 
 import { HomeComponent } from "./home.component";
-import { HttpClientModule } from "@angular/common/http";
 import { HeaderSectionComponent } from "src/app/core/header-section/header-section.component";
-import { WrapContentComponent } from "src/app/core/wrap-content/wrap-content.component";
-import { NoResultsComponent } from "src/app/core/no-results/no-results.component";
+import { LoadingComponent } from "src/app/core/loading/loading.component";
 import { FilmItemComponent } from "./film-item/film-item.component";
-import { RouterTestingModule } from "@angular/router/testing";
 
 describe("HomeComponent", () => {
   let component: HomeComponent;
@@ -18,7 +17,7 @@ describe("HomeComponent", () => {
       declarations: [
         HomeComponent,
         HeaderSectionComponent,
-        NoResultsComponent,
+        LoadingComponent,
         FilmItemComponent
       ]
     }).compileComponents();
@@ -40,8 +39,8 @@ describe("HomeComponent", () => {
     expect(app).toBeTruthy();
   });
 
-  it("should load no results", () => {
-    const fixture = TestBed.createComponent(NoResultsComponent);
+  it("should load loading", () => {
+    const fixture = TestBed.createComponent(LoadingComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
@@ -50,6 +49,13 @@ describe("HomeComponent", () => {
     const fixture = TestBed.createComponent(FilmItemComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
+  });
+
+  it("should call getFilms function", async done => {
+    let getFilms = spyOn(component, "getFilms");
+    component.ngOnInit();
+    expect(getFilms).toHaveBeenCalled();
+    done();
   });
 
   it("should create", () => {

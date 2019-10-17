@@ -17,7 +17,33 @@ describe("HeaderSectionComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderSectionComponent);
     component = fixture.componentInstance;
+    component.btnback = true;
     fixture.detectChanges();
+  });
+
+  it("should instantiate", () => {
+    expect(component).toBeDefined();
+  });
+
+  it("should call back function on click", async () => {
+    const back = spyOn(component, "back");
+
+    let backbtn = fixture.debugElement.nativeElement.querySelector(".btnback");
+    backbtn.click();
+
+    expect(back).toHaveBeenCalled();
+  });
+
+  it("should call back()", async () => {
+    expect(component.back()).toBeTruthy();
+  });
+
+  it("should call back function", async () => {
+    const back = spyOn(component, "back");
+
+    component.back();
+
+    expect(back).toHaveBeenCalled();
   });
 
   it("should create", () => {
