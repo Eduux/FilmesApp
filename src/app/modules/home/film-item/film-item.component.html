@@ -1,6 +1,6 @@
 <div class="film" (click)="openDetails(film?.url)">
   <div>
-    <img *ngIf="film?.title" src="/assets/pop-corn.svg" [alt]="film.title" />
+    <img *ngIf="film?.title" src="assets/pop-corn.svg" [alt]="film.title" />
     <p *ngIf="film?.title">
       <strong>{{ film.title }} - {{ film.release_date | date: "yyyy" }}</strong>
     </p>
