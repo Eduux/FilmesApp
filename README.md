@@ -9,7 +9,7 @@ Entrar na pasta e instalar suas dependências com o comando `npm install`.
 ## Para rodar o server
 
 ```
-ng serve
+npm start
 ```
 
 ## Para rodar os testes

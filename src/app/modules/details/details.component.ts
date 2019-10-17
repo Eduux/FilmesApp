@@ -33,7 +33,7 @@ export class DetailsComponent implements OnInit {
         this.film = film;
       },
       err => {
-        this.router.navigate(["/home"]);
+        this.router.navigate(["/"]);
       }
     );
   }
