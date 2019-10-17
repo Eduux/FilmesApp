@@ -25,7 +25,7 @@ describe("HeaderComponent", () => {
     expect(component).toBeDefined();
   });
 
-  it("should trigger the navigation to `/home`", async(() => {
+  it("should trigger the navigation to `/`", async(() => {
     let router = TestBed.get(Router);
     let spy = spyOn(router, "navigate");
     component.goHome();
