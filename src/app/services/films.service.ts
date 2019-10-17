@@ -1,15 +1,15 @@
-import { Injectable } from "@angular/core";
-import { api } from "src/environments/environment";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { Film } from "../interfaces/film";
-import { Films } from "../interfaces/films";
+import { Injectable } from '@angular/core';
+import { api } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Film } from '../interfaces/film';
+import { Films } from '../interfaces/films';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class FilmsService {
-  urlService: String = "films";
+  urlService = 'films';
 
   constructor(private http: HttpClient) {}
 

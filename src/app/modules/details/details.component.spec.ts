@@ -1,13 +1,13 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailsComponent } from "./details.component";
-import { HttpClientModule } from "@angular/common/http";
-import { HeaderSectionComponent } from "src/app/core/header-section/header-section.component";
-import { LoadingComponent } from "src/app/core/loading/loading.component";
-import { RouterTestingModule } from "@angular/router/testing";
-import { FilmDetailsComponent } from "./film-details/film-details.component";
+import { DetailsComponent } from './details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderSectionComponent } from 'src/app/core/header-section/header-section.component';
+import { LoadingComponent } from 'src/app/core/loading/loading.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { FilmDetailsComponent } from './film-details/film-details.component';
 
-describe("DetailsComponent", () => {
+describe('DetailsComponent', () => {
   let component: DetailsComponent;
   let fixture: ComponentFixture<DetailsComponent>;
 
@@ -29,36 +29,36 @@ describe("DetailsComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should instantiate", () => {
+  it('should instantiate', () => {
     expect(component).toBeDefined();
   });
 
-  it("should load header section", () => {
-    const fixture = TestBed.createComponent(HeaderSectionComponent);
-    const app = fixture.debugElement.componentInstance;
+  it('should load header section', () => {
+    const headerSection = TestBed.createComponent(HeaderSectionComponent);
+    const app = headerSection.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it("should load loading", () => {
-    const fixture = TestBed.createComponent(LoadingComponent);
-    const app = fixture.debugElement.componentInstance;
+  it('should load loading', () => {
+    const loading = TestBed.createComponent(LoadingComponent);
+    const app = loading.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it("should load Film Details", () => {
-    const fixture = TestBed.createComponent(FilmDetailsComponent);
-    const app = fixture.debugElement.componentInstance;
+  it('should load Film Details', () => {
+    const filmDetails = TestBed.createComponent(FilmDetailsComponent);
+    const app = filmDetails.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it("should call getFilm function", async done => {
-    let getFilm = spyOn(component, "getFilm");
+  it('should call getFilm function', async done => {
+    const getFilm = spyOn(component, 'getFilm');
     component.ngOnInit();
     expect(getFilm).toHaveBeenCalled();
     done();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,12 +1,12 @@
-import { TestBed, async } from "@angular/core/testing";
-import { RouterTestingModule } from "@angular/router/testing";
-import { HttpClientModule } from "@angular/common/http";
+import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from "./app.component";
-import { HeaderComponent } from "./core/header/header.component";
-import { WrapContentComponent } from "./core/wrap-content/wrap-content.component";
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './core/header/header.component';
+import { WrapContentComponent } from './core/wrap-content/wrap-content.component';
 
-describe("AppComponent", () => {
+describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, HttpClientModule],
@@ -14,19 +14,19 @@ describe("AppComponent", () => {
     }).compileComponents();
   }));
 
-  it("should create the app", () => {
+  it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it("should load header", () => {
+  it('should load header', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it("should load Wrap Content", () => {
+  it('should load Wrap Content', () => {
     const fixture = TestBed.createComponent(WrapContentComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
@@ -35,6 +35,6 @@ describe("AppComponent", () => {
   it(`should have as title 'FilmesApp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual("FilmesApp");
+    expect(app.title).toEqual('FilmesApp');
   });
 });

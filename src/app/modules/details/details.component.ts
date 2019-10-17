@@ -1,17 +1,17 @@
-import { Component, OnInit } from "@angular/core";
-import { Film } from "src/app/interfaces/film";
-import { FilmsService } from "src/app/services/films.service";
-import { ActivatedRoute, Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { Film } from 'src/app/interfaces/film';
+import { FilmsService } from 'src/app/services/films.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: "app-details",
-  templateUrl: "./details.component.html",
-  styleUrls: ["./details.component.scss"]
+  selector: 'app-details',
+  templateUrl: './details.component.html',
+  styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
   id: number;
   film: Film;
-  error: Boolean = false;
+  error = false;
 
   constructor(
     private filmService: FilmsService,
@@ -33,7 +33,7 @@ export class DetailsComponent implements OnInit {
         this.film = film;
       },
       err => {
-        this.router.navigate(["/"]);
+        this.router.navigate(['/']);
       }
     );
   }

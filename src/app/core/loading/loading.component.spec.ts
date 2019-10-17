@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoadingComponent } from "./loading.component";
+import { LoadingComponent } from './loading.component';
 
-describe("NoResultsComponent", () => {
+describe('NoResultsComponent', () => {
   let component: LoadingComponent;
   let fixture: ComponentFixture<LoadingComponent>;
 
@@ -18,11 +18,11 @@ describe("NoResultsComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should instantiate", () => {
+  it('should instantiate', () => {
     expect(component).toBeDefined();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

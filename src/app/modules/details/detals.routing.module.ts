@@ -1,10 +1,10 @@
-import { DetailsComponent } from "./details.component";
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { DetailsComponent } from './details.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: DetailsComponent
   }
 ];

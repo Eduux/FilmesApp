@@ -1,10 +1,10 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from "./header.component";
-import { Router } from "@angular/router";
-import { RouterTestingModule } from "@angular/router/testing";
+import { HeaderComponent } from './header.component';
+import { Router } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
-describe("HeaderComponent", () => {
+describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
@@ -21,18 +21,18 @@ describe("HeaderComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should instantiate", () => {
+  it('should instantiate', () => {
     expect(component).toBeDefined();
   });
 
-  it("should trigger the navigation to `/`", async(() => {
-    let router = TestBed.get(Router);
-    let spy = spyOn(router, "navigate");
+  it('should trigger the navigation to `/`', async(() => {
+    const router = TestBed.get(Router);
+    const spy = spyOn(router, 'navigate');
     component.goHome();
-    expect(spy).toHaveBeenCalledWith(["/"]);
+    expect(spy).toHaveBeenCalledWith(['/']);
   }));
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

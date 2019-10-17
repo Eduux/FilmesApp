@@ -3,5 +3,5 @@ export const environment = {
 };
 
 export const api = {
-  baseUrl: "https://swapi.co/api"
+  baseUrl: 'https://swapi.co/api'
 };
