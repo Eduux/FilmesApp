@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FilmsService } from "src/app/services/films.service";
-import { Film } from "src/app/interfaces/film";
+import { Films } from "src/app/interfaces/films";
 
 @Component({
   selector: "app-home",
@@ -8,7 +8,7 @@ import { Film } from "src/app/interfaces/film";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-  films: Array<Film>;
+  films: Films;
 
   constructor(private filmService: FilmsService) {}
 
