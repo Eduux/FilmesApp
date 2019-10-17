@@ -1,6 +1,8 @@
-import { Film } from './film';
+import { Film } from "./film";
 
 export interface Films {
-  size: number;
+  context: number;
+  next: number;
+  previous: number;
   results: Array<Film>;
 }
